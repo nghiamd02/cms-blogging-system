@@ -27,8 +27,19 @@
                         <td>{$row['post_tags']}</td>
                         <td>{$row['post_content']}</td>
                         <td>{$row['post_date']}</td>
+                        <td><a href= 'posts.php?delete={$row['post_id']}'>Delete</a></td>
                 </tr>";
             }
         ?>
     </tbody>
-</table>                        
+</table>
+
+<?php 
+    if(isset($_GET['delete'])){
+        $post_id = $_GET['delete'];
+        $deleteQuery = "DELETE FROM posts WHERE post_id = {$post_id}";
+        $result = mysqli_query($conn, $deleteQuery);
+        header("Location: posts.php");
+    }
+
+?>
