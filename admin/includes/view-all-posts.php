@@ -27,6 +27,7 @@
                         <td>{$row['post_tags']}</td>
                         <td>{$row['post_content']}</td>
                         <td>{$row['post_date']}</td>
+                        <td><a href= 'posts.php?source=edit_post&p_id={$row['post_id']}'>Edit</a></td>
                         <td><a href= 'posts.php?delete={$row['post_id']}'>Delete</a></td>
                 </tr>";
             }

@@ -8,11 +8,12 @@
                 while($row = mysqli_fetch_assoc($getInfo)){
                     $cat_title = $row['cat_title'];
         ?>
-            <label for="cat_title">Edit category</label>
-            <input value="<?php if(isset($cat_title)){echo $cat_title;}?>" class="form-control" type="text" name="cat_title" >
-            
-        
-        
+        <label for="cat_title">Edit category</label>
+        <input value="<?php if(isset($cat_title)){echo $cat_title;}?>" class="form-control" type="text"
+            name="cat_title">
+
+
+
         <?php }}?>
 
         <?php 
@@ -26,16 +27,13 @@
                     if(!$update_category){
                         die("Smt wrong when updating new category !". mysqli_error($conn));
                     }
+                    header("Location: categories.php");
                 }
             }
         ?>
     </div>
 
     <div class="form-group">
-            <input  class="btn btn-primary"
-                        type="submit" 
-                        name="update" 
-                        value="Update"
-    >
+        <input class="btn btn-primary" type="submit" name="update" value="Update">
     </div>
 </form>

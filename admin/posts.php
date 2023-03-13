@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<?php include "includes/header.php"?> 
+<?php include "includes/header.php"?>
 
 <body>
-    
+
     <div id="wrapper">
         <!-- Navigation -->
-       <?php include "includes/navbar.php"?>
+        <?php include "includes/navbar.php"?>
 
         <div id="page-wrapper">
 
@@ -31,8 +31,8 @@
                                 case "add_post":
                                     include "includes/add-post.php";
                                     break;
-                                case "34":
-                                    echo "34";
+                                case "edit_post":
+                                    include "includes/edit-post.php";
                                     break;
                                 case "200":
                                     echo "200";
